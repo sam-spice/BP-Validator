@@ -197,7 +197,7 @@ function check_missing_map(map)
 {
     var to_return = "";
     var min_tax = prompt("Please enter minimum number of taxes for each prop\n" 
-            + "defaults 1",1);
+            + "defaults to 1",1);
     if(min_tax < 0 || min_tax === undefined /*|| typeof min_tax !== num*/) 
     {
         min_tax = 0;
