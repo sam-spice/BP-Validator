@@ -277,7 +277,8 @@ function map_taxes(map)
         var check_against = undefined;
         if (temp_prop === check_against)
         {
-            missing_id += "Prop id: " + temp_id + " is not found in the key\n";
+            missing_id += "Prop Name: " + temp_tax.Property_Name + "Prop id: " + temp_id + 
+            " is not found in the key\n";
             counter++;
         }
         else
@@ -304,7 +305,8 @@ function map_fees(map)
         var check_against = undefined;
         if (temp_prop === check_against)
         {
-            missing_id += "Prop id: " + temp_id + " is not found in the key\n";
+            missing_id += "Prop Name: " + temp_prop.Property_Name + "Prop id: " + 
+            temp_id + " is not found in the key\n";
             num_missing++;
         }
         else
