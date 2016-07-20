@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Validator</title>
+        <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+    </head>
+    <body>       
+        <script src="papaparse.js"></script>
+        <script src="jquery-2.2.4.js"></script>
+        <script src="Validator.js"></script>
+       
+        <div style="text-align:center;" >Select Fee File
+        <input type="file" id="csv-file1" name="files"/>
+        <input type="button" id="fee_button" value="fee button">
+        </div>
+        
+        
+        <div style="text-align:center;">Select Tax File
+         <input type="file" id="csv-file2" name="files"/>
+         <input type="button" id="tax_button" value="tax button">
+        </div>
+        
+        <div style="text-align:center;">Select Key File
+         <input type="file" id="csv-file3" name="files"/>
+         <input type="button" id="properties_button" value="Key Button"><br><br>
+        </div>
+     
+        <div style="text-align:center;">Run Final Tests
+         <input type="button" id="final_button" value="Run tests"><br><br>
+        </div>
+        
+        <b style="margin-top:20px">Issues with Fees</b>
+        <p id="display_fees" style="white-space: pre-line"></p>
+        
+        <b style="margin-top:20px">Issues with taxes</b>
+        <p id="display_taxes" style="white-space: pre-line"></p>
+        
+        <b style="margin-top:20px">Properties</b>
+        
+        <input type="button" id="Hide-Show" value="Hide/Show" 
+               onClick="action();" />
+        
+        <input type="button" id="property_update" value="Show prop data"/>
+        
+        <script>
+    var hidden = false;
+    function action() {
+        hidden = !hidden;
+        if(hidden) {
+            document.getElementById('display_properties').style.display = 'none';
+        } else {
+            document.getElementById('display_properties').style.display = 'block';
+        }
+    }
+</script>
+
+        <p id="display_properties" style="white-space: pre-line"></p>
+        
+        <br><b style="margin-top:20px">Issues with properties</b>
+        <p id="property_issues" style="white-space: pre-line"></p>
+    </body>
+</html>
