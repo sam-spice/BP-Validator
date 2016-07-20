@@ -197,13 +197,13 @@ function check_missing_map(map)
 {
     var to_return = "";
     var min_tax = prompt("Please enter minimum number of taxes for each prop\n" 
-            + "if unknown enter 1",1);
+            + "defaults 1",1);
     if(min_tax < 0 || min_tax === undefined /*|| typeof min_tax !== num*/) 
     {
         min_tax = 0;
     }
     var min_fee = prompt("Please enter minimum number of fees for each prop \n" 
-            + "if unknown enter 1",1);
+            + "defaults to 1",1);
     if(min_fee < 0 || min_fee === undefined) min_tax = 0;
     var counter = 0;
    for (var value of map.values()) 
